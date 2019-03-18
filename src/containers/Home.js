@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
+import { Row, Col } from 'reactstrap';
 
 class Home extends Component {
   componentDidMount() {
-    document.title = 'Home Page';
+    document.title = 'Front-end Template';
   }
 
   render() {
     return (
-      <div>
-        <h1>Welcome</h1>
-        <ul>
-          <li>
-            <a href="/onboard">Onboard</a>
-          </li>
-          <li>
-            <a href="/p/22">A Profile</a>
-          </li>
-        </ul>
-
-      </div>
+      <Row>
+        <h1 className="sr-only">Front End Template</h1>
+        <Col className="mt-5" lg="12">
+          <h2 className="display-4">Massive header</h2>
+          <p>Look at this</p>
+          <a href="/info">Get started</a>
+        </Col>
+        <Col className="mt-4">
+          <h3 className="h4">Resources</h3>
+          <ul>
+            <li>FE Github</li>
+            <li>MS Github</li>
+            <li>Account Github</li>
+          </ul>
+        </Col>
+      </Row>
     );
   }
 }

@@ -18,14 +18,14 @@ import LocalizedComponent
 
 import { loginAction, logoutAction, clearErrorAction } from '../store';
 
+// Config
 import oidcConfig from '../oidcConfig.dev';
 
-import Profile from './Profile';
+// Containers
 import Home from './Home';
-import Onboard from './Onboard';
+import Info from './Info';
 
-import ProfileSearch from '../components/core/ProfileSearch';
-
+// Assets
 import enFip from '../assets/imgs/sig-en-w.png';
 
 export class App extends Component {
@@ -60,14 +60,9 @@ export class App extends Component {
               <img src={enFip} alt="Government of Canada" />
             </div>
             <NavbarBrand href="/" className="directory-brand">
-              <span>Directory</span>
+              <span>App Title</span>
             </NavbarBrand>
             <Nav className="ml-auto">
-              <NavItem className="mr-2">
-                <ProfileSearch
-                  defaultValue="22"
-                />
-              </NavItem>
               <NavItem className="mr-2">
                 <Login
                   oidcConfig={oidcConfig}
@@ -97,19 +92,20 @@ export class App extends Component {
               </NavItem>
             </Nav>
           </Navbar>
-          <Container className="mt-3">
-            <Switch>
-              <Fragment>
-                <Route
-                  exact
-                  path="/"
-                  component={Home}
-                />
-                <Route path="/p/:id" component={Profile} />
-                <Route path="/onboard" component={Onboard} />
-              </Fragment>
-            </Switch>
-          </Container>
+          <main>
+            <Container className="mt-3">
+              <Switch>
+                <Fragment>
+                  <Route
+                    exact
+                    path="/"
+                    component={Home}
+                  />
+                  <Route path="/info" component={Info} />
+                </Fragment>
+              </Switch>
+            </Container>
+          </main>
         </div>
       </BrowserRouter>
     );
