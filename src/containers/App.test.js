@@ -16,8 +16,8 @@ describe('App', () => {
         <App />
       </MockedProvider>
     ));
-    const welcomeText = queryByText('Directory');
-    expect(welcomeText.innerHTML).toBe('Directory');
+    const welcomeText = queryByText('App Title');
+    expect(welcomeText.innerHTML).toBe('App Title');
   });
   describe('Language Button', () => {
     it('toggles language when clicked', () => {

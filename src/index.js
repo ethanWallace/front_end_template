@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { ApolloClient } from 'apollo-client';
-// import ApolloClient from 'apollo-boost';
+import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { createUploadLink } from 'apollo-upload-client';
 
 import '@gctools-components/aurora-css/css/aurora.min.css';
 
@@ -17,15 +14,8 @@ import store from './store';
 
 import './assets/css/index.css';
 
-const cache = new InMemoryCache({
-  dataIdFromObject: object => object.gcID || null,
-});
-
 const client = new ApolloClient({
-  link: createUploadLink({
-    uri: 'https://paas.beta.gccollab.ca/graphql',
-  }),
-  cache,
+  uri: 'https://link.to.your.backend/graphql',
 });
 
 ReactDOM.render(
