@@ -1,14 +1,15 @@
 # OADW ReactJs Front End Template :tada:
 
-This is an opinionated Reactjs boilerplate to help you get started making front end applications. The boilerplate takes care of your theme and component libraries, project structure, routing, I18N, OpenID login, testing libraries, redux store, and code linting. 
+This is an opinionated Reactjs boilerplate to help you get started making front end applications. The boilerplate takes care of your theme and component libraries, project structure, routing, I18N, OpenID login, testing libraries, redux store, and code linting. :fire: 
 
 You are always free to add and remove features or packages that you need!
 
-This project will not provide your app with a backend / data store, but not to worry, [we have a template for that too!](https://github.com/gctools-outilsgc/micro_service_template)
+This project will not provide your app with a graphQL backend / data store, but not to worry, [we have a template for that too!](https://github.com/gctools-outilsgc/micro_service_template) :sunglasses:
 
-## Getting Starting
+## Getting Starting :raised_hands:
 
-You will need to have node (link to node) and yarn (link to yarn) installed 
+### Step 0
+You will need to have [Nodejs](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/lang/en/) installed.
 
 ### Step 1 - Install
 ```
@@ -18,7 +19,7 @@ yarn install
 yarn start
 ```
 
-### Step 2 - Config
+### Step 2 - Config :wrench:
 
 You will need to create an `oidcConfig.dev.js` file in the `src` directory to allow your app to login to your OpenID authentication provider. The file should be formated a little something like so:
 
@@ -37,7 +38,7 @@ module.exports = {
 };
 ```
 
-Next if you have a graphQL backend set up that you wish to point your front end app to in `src/index.js` replace the Appollo Client uri with your endpoint:
+Next if you have a graphQL backend set up that you wish to point your front end app to, in `src/index.js` replace the Apollo Client uri with your endpoint:
 
 ```
 const client = new ApolloClient({
@@ -46,13 +47,13 @@ const client = new ApolloClient({
 ```
 Need a graphQL backend? [Here is handy template to help you build one!](https://github.com/gctools-outilsgc/micro_service_template)
 
-Now you're ready to go! :tada:
+Now you're ready to go! :cake:
 
-## Features and How to use it
+## Features / What's Included :thumbsup:
 
 All the packages discussed are already included in the project.
 
-### Project Structure
+### Project Structure :file_folder:
 
 ```
 |-/config/
@@ -70,13 +71,17 @@ All the packages discussed are already included in the project.
 |  |-/gql/ # Place your graphQL queries and mutations in one place to be leveraged througout the app
 ```
 
-### Component Library and Styling
+### Component Library and Styling :art:
 We leverage the [Aurora Design](https://design.gccollab.ca/) system which is a theme based on [Bootstrap](https://getbootstrap.com/).
 The boilerplate comes already packaged with the [Aurora stylesheet](https://www.npmjs.com/package/@gctools-components/aurora-css) and [reactstrap](https://reactstrap.github.io/components/alerts/) to help you build components quickly.
 
-### I18N
+### Apollo Client and GraphQL
 
-Localization is set up and configured with this [I18N translation webpack plugin](https://github.com/gctools-outilsgc/gctools-components/tree/master/packages/i18n-translation-webpack-plugin) and it's [React Helper package](https://github.com/gctools-outilsgc/gctools-components/tree/master/packages/react-i18n-translation-webpack)
+Learn about how to leverage Apollo Client for react to handle [queries](https://www.apollographql.com/docs/react/essentials/queries.html) and [mutations](https://www.apollographql.com/docs/react/essentials/mutations.html).
+
+### I18N :earth_americas:
+
+Localization is set up and configured with this [I18N translation webpack plugin](https://github.com/gctools-outilsgc/gctools-components/tree/master/packages/i18n-translation-webpack-plugin) and it's [React Helper package](https://github.com/gctools-outilsgc/gctools-components/tree/master/packages/react-i18n-translation-webpack).
 
 #### How to use it
 ```
@@ -93,26 +98,25 @@ class MyComponent extends React.Component {
 export default LocalizedComponent(MyComponent);
 ```
 
-### Testing
+### Testing :pencil2:
 
-`yarn test`
+Run `yarn test` to run the testing library.
 
-This project leverages [Jest](https://jestjs.io/docs/en/tutorial-react.html) and [React Testing Library](https://github.com/kentcdodds/react-testing-library)
+This project leverages [Jest](https://jestjs.io/docs/en/tutorial-react.html) and [React Testing Library](https://github.com/kentcdodds/react-testing-library).
 
-### Routing
+### Routing :blue_car:
 
-Routing in the application in handled by [React-Router-Dom](https://github.com/ReactTraining/react-router#readme)
+Routing in the application in handled by [React-Router-Dom](https://github.com/ReactTraining/react-router#readme).
 
 Routes are defined in `src/containers/App.js` and should ideally route to another container component.
 
-### Linting
+### Linting :sparkles:
 
 Please keep your code pretty, or else the app will not compile. [ESLint](https://eslint.org/) is configured through [this config package](https://github.com/gctools-outilsgc/gctools-components/tree/master/packages/eslint-config). It is an extension of the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript) with some small changes.
 
-### Additional Links
-
+### Additional Links :wink:
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+Learn about [Storybook](https://storybook.js.org/) for building custom components in your project. Storybook is included in this template. Run `yarn run storybook`.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
