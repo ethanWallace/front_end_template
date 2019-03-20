@@ -1,3 +1,7 @@
+/*
+* Sometimes you may want to write some additional CSS, do it here!
+*/
+
 body {
   margin: 0;
   padding: 0;
@@ -11,32 +15,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-/*Loading*/
-
-.loading-state {
-  background: linear-gradient(271deg, #dbdbdb, #e8e8e8);
-  background-size: 400% 400%;
--webkit-animation: LoadingText 2s ease infinite;
--moz-animation: LoadingText 2s ease infinite;
-animation: LoadingText 2s ease infinite;
-}
-
-@-webkit-keyframes LoadingText {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 51%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes LoadingText {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 51%}
-    100%{background-position:0% 50%}
-}
-@keyframes LoadingText { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 51%}
-    100%{background-position:0% 50%}
 }
 
 /* Navbar */
@@ -54,149 +32,4 @@ animation: LoadingText 2s ease infinite;
 
 .directory-brand {
   padding-left: 295px;
-}
-
-.fake-head {
-  height: 22px;
-  width: 100px;
-}
-
-.fake-body {
-  height: 16px;
-  width: 350px;
-  margin-bottom: 5px;
-}
-
-.search-results {
-  border: 1px solid #c7c7c7;
-  box-shadow: 0 0 5px rgba(0,0,0,.15);
-    position: absolute;
-    background-color: white;
-    z-index: 999;
-    padding: 8px;
-    border-radius: 5px;
-    width: 230px;
-}
-
-.search-results-none {
-  display:none;
-}
-
-/* Profile Card */
-
-.profile-card-title {
-  font-size: 1.5rem;
-  font-family: "Rubik", sans-serif;
-  font-weight: 500;
-  border-bottom: 1px solid black;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-}
-
-.profile-name {
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-
-.profile-title {
-  font-family: "Rubik", sans-serif;
-  font-weight: 200;
-  font-size: 1.2rem;
-}
-
-.profile-card-footer {
-  border-top: 1px solid black;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* Edit Profile Modal */
-
-.edit-profile-modal .modal-content {
-  border-radius: 6px;
-}
-
-.edit-profile-modal label {
-  width: 100%;
-  margin-bottom: 12px;
-}
-
-.edit-profile-modal label .font-weight-bold {
-  margin-bottom: 5px;
-  display: inline-block;
-}
-
-.edit-profile-modal-section {
-  border-bottom: 1px solid black;
-  padding-bottom: 20px;
-  padding-top: 15px;
-}
-
-/* Onboarding Module */
-
-.basic-form-holder label {
-  width: 100%;
-  margin-bottom: 8px;
-}
-
-.onboard-profile input{
-  width: 100%;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  animation-name: fadeIn;
-}
-
-.onboard-nav ul li {
-  width: 20%;
-  padding: 5px 2%;
-}
-
-.onboard-nav ul li .display-num {
-  border: 1px solid transparent;
-  border-radius: 50%;
-  padding: 3px 10px;
-  margin-right: 8px;
-  background-color: #000A3D;
-  color: white;
-}
-
-.onboard-nav ul li .display-text {
-  color: grey;
-}
-
-.onboard-nav ul li.ob-active {
-  background-color: #FEC04F;
-  color: black;
-  border-radius: 3px;
-}
-
-.onboard-nav ul li.ob-active .display-num {
-  background-color: white;
-  color: black;
-}
-
-.onboard-nav ul li.ob-active .display-text {
-  color: black;
-}
-
-.onboard-container {
-  width: 75%;
-}
-
-@media (max-width: 992px) { 
-  .onboard-container {
-    width: 100%;
-  }
 }
