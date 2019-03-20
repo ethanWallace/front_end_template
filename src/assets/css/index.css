@@ -33,3 +33,13 @@ code {
 .directory-brand {
   padding-left: 295px;
 }
+
+/* Home */
+
+.img-col {
+  height:698px;
+}
+
+.display-img {
+  position:fixed;
+}
