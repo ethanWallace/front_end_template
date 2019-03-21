@@ -34,7 +34,8 @@ code {
   padding-left: 295px;
 }
 
-/* Home */
+/* Temp CSS for intro pages */
+/* delete after installing */
 
 .img-col {
   height:698px;
@@ -42,4 +43,20 @@ code {
 
 .display-img {
   position:fixed;
+}
+
+code {
+  color: #c60f5e;
+}
+
+@media (max-width: 576px) {
+  .img-col {
+    height:0;
+  }
+
+  .sm-blob {
+    width:100%;
+    float:none;
+    height:auto;
+  }
 }

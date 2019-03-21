@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
+// assets
 import blob from '../assets/imgs/static-blob.png';
 
 class Home extends Component {
@@ -9,6 +11,7 @@ class Home extends Component {
   }
 
   render() {
+    // To get past 79 line length limit
     const links = {
       micro: 'https://github.com/gctools-outilsgc/micro_service_template',
       front: 'https://github.com/gctools-outilsgc/micro_service_template',
@@ -24,7 +27,12 @@ class Home extends Component {
              provider and back-end service. Also features easy
              internationalization.
           </p>
-          <a href="/info">Get started using the front-end template</a>
+          <Link
+            to="/info"
+            href="/info"
+          >
+            Get started using the front-end template
+          </Link>
 
           <h3 className="h4 mt-5">More information to get the job done</h3>
           <ul>
