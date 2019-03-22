@@ -33,3 +33,30 @@ code {
 .directory-brand {
   padding-left: 295px;
 }
+
+/* Temp CSS for intro pages */
+/* delete after installing */
+
+.img-col {
+  height:698px;
+}
+
+.display-img {
+  position:fixed;
+}
+
+code {
+  color: #c60f5e;
+}
+
+@media (max-width: 576px) {
+  .img-col {
+    height:0;
+  }
+
+  .sm-blob {
+    width:100%;
+    float:none;
+    height:auto;
+  }
+}

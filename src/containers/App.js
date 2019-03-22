@@ -94,6 +94,8 @@ export class App extends Component {
           </Navbar>
           <main>
             <Container className="mt-3">
+
+              {/* Routing in react */}
               <Switch>
                 <Fragment>
                   <Route

@@ -1,32 +1,38 @@
-import React from 'react';
-import { Row, Col } from 'reactstrap';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-export default () => (
-  <div className="mt-5">
-    <h1>Using the Front-end Template</h1>
-    <ul className="mt-5 mb-5">
-      <li>First link</li>
-      <li>Second Link</li>
-      <li>Third link</li>
-    </ul>
-    <Row>
-      <Col lg="6" className="pl-5">
-        <h2>First Section</h2>
-        <p>Cool stuff</p>
-      </Col>
-      <Col lg="6" />
-      <Col lg="6" />
-      <Col lg="6" className="pl-5">
-        <h2>Second Section</h2>
-        <p>Cool stuff</p>
-      </Col>
-      <Col lg="6" className="pl-5">
-        <h2>Third Section</h2>
-        <p>Cool stuff</p>
-      </Col>
-      <Col lg="6" />
-    </Row>
+// components
+import ConfigSection from '../components/info/ConfigurationSection';
+import StructSection from '../components/info/StructureSection';
+import TogetherSection from '../components/info/TogetherSection';
 
-    <a href="/">Return</a>
-  </div>
-);
+class Info extends Component {
+  componentDidMount() {
+    document.title = 'Using the Front-end template';
+  }
+  render() {
+    return (
+      <div className="mt-5">
+        <h1>Using the Front-end Template</h1>
+
+        <ConfigSection />
+        <StructSection />
+        <TogetherSection />
+
+        <div>
+          <p className="text-center h2 mt-4">Happy Coding</p>
+        </div>
+        <div className="mt-5 mb-5">
+          <Link
+            to="/"
+            href="/"
+          >
+            Return to home
+          </Link>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Info;
