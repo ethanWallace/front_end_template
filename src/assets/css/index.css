@@ -49,13 +49,21 @@ code {
   color: #c60f5e;
 }
 
+@media (max-width: 1235px) {
+  .sm-blob {
+    width:100%;
+  }
+  .sm-img-col {
+    height:500px;
+  }
+}
+
 @media (max-width: 576px) {
   .img-col {
     height:0;
   }
 
   .sm-blob {
-    width:100%;
     float:none;
     height:auto;
   }

@@ -27,15 +27,20 @@ import Info from './Info';
 
 // Assets
 import enFip from '../assets/imgs/sig-en-w.png';
+import frFip from '../assets/imgs/sig-fr-w.png';
 
 export class App extends Component {
   static toggleLanguage(e) {
     if (e) e.preventDefault();
     localizer.setLanguage(((localizer.lang === 'en_CA') ? 'fr_CA' : 'en_CA'));
+    document.documentElement.lang = localizer.lang;
   }
   constructor(props) {
     super(props);
     this.state = { name: false };
+  }
+  componentDidMount() {
+    document.documentElement.lang = localizer.lang;
   }
   render() {
     const {
@@ -52,12 +57,15 @@ export class App extends Component {
       this.setState({ name: false });
       onLogout();
     };
+
+    const fip = ((localizer.lang === 'en_CA') ? enFip : frFip);
+
     return (
       <BrowserRouter>
         <div>
           <Navbar color="white" className="shadow-sm">
             <div className="h-100 directory-fip">
-              <img src={enFip} alt="Government of Canada" />
+              <img src={fip} alt={__('Government of Canada')} />
             </div>
             <NavbarBrand href="/" className="directory-brand">
               <span>App Title</span>
@@ -80,7 +88,7 @@ export class App extends Component {
                         onClick(e);
                       }}
                     >
-                      {this.state.name || 'Login'}
+                      {this.state.name || __('Login')}
                     </Button>
                   )}
                 </Login>

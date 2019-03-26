@@ -14,7 +14,7 @@ class Home extends Component {
     // To get past 79 line length limit
     const links = {
       micro: 'https://github.com/gctools-outilsgc/micro_service_template',
-      front: 'https://github.com/gctools-outilsgc/micro_service_template',
+      front: 'https://github.com/gctools-outilsgc/front_end_template',
       account: 'https://github.com/gctools-outilsgc/concierge',
     };
     return (

@@ -6,6 +6,9 @@ import LocalizedComponent
 
 import config from '../../assets/imgs/config.png';
 
+import FileCode from './ConfigFileCode';
+import BackendCode from './BackendCodeExample';
+
 function ConfigSection() {
   return (
     <Row className="flex mt-5">
@@ -17,20 +20,16 @@ function ConfigSection() {
           <code> src</code> directory to connect to your OpenID
             authentication provider. The file should follow this format:
         </p>
-        <pre>
-          <code>
-            <p>code</p>
-          </code>
-        </pre>
+
+        <FileCode />
+
         <p>
           Next enter the the uri to your graphql backend in the
           <code> src/index.js</code> file.
         </p>
-        <pre>
-          <code>
-            <p>code again</p>
-          </code>
-        </pre>
+
+        <BackendCode />
+
         <p>
           You are now ready to go.
         </p>

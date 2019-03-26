@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-12 14:19-0400\n"
+"POT-Creation-Date: 2019-03-25 15:21-0400\n"
 "PO-Revision-Date: 2019-02-12 14:19-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -18,3 +18,10 @@ msgstr ""
 msgid "Language"
 msgstr "EN"
 
+#: 60:36 src/containers/App.js
+msgid "Government of Canada"
+msgstr "Gouvernement du Canada"
+
+#: 87:42 src/containers/App.js
+msgid "Login"
+msgstr "Ouvrir une session"
