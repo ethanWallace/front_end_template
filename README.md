@@ -122,7 +122,7 @@ The tempalte already come prepared to deploy your front-end to github pages. To 
 "homepage": "http://username.github.io/repo",
 ```
 
-Then run `yarn deploy` (give it a moment to build :wink:)
+Then run `yarn deploy-gh-pages` (give it a moment to build :wink:)
 
 :warning: Watch and make sure your `config` or `env` files do not get pushed with the build!
 
