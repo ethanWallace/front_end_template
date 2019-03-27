@@ -53,7 +53,9 @@ export class App extends Component {
       onLogout();
     };
     return (
-      <BrowserRouter>
+      <BrowserRouter
+        basename={process.env.PUBLIC_URL}
+      >
         <div>
           <Navbar color="white" className="shadow-sm">
             <div className="h-100 directory-fip">
