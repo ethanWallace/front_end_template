@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Container,
   Button,
   Navbar,
   NavbarBrand,
@@ -94,20 +93,18 @@ export class App extends Component {
             </Nav>
           </Navbar>
           <main>
-            <Container fluid>
-              {/* Routing in react */}
-              <Switch>
-                <Fragment>
-                  <Route
-                    exact
-                    path="/"
-                    component={Home}
-                  />
-                  <Route path="/info" component={Info} />
-                  <Route path="/product" component={ProductPage} />
-                </Fragment>
-              </Switch>
-            </Container>
+            {/* Routing in react */}
+            <Switch>
+              <Fragment>
+                <Route
+                  exact
+                  path="/"
+                  component={Home}
+                />
+                <Route path="/info" component={Info} />
+                <Route path="/product" component={ProductPage} />
+              </Fragment>
+            </Switch>
           </main>
         </div>
       </BrowserRouter>

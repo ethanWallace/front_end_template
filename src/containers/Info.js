@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import { Container } from 'reactstrap';
+
 // components
 import ConfigSection from '../components/info/ConfigurationSection';
 import StructSection from '../components/info/StructureSection';
@@ -12,25 +14,27 @@ class Info extends Component {
   }
   render() {
     return (
-      <div className="mt-5">
-        <h1>Using the Front-end Template</h1>
+      <Container>
+        <div className="mt-5">
+          <h1>Using the Front-end Template</h1>
 
-        <ConfigSection />
-        <StructSection />
-        <TogetherSection />
+          <ConfigSection />
+          <StructSection />
+          <TogetherSection />
 
-        <div>
-          <p className="text-center h2 mt-4">Happy Coding</p>
+          <div>
+            <p className="text-center h2 mt-4">Happy Coding</p>
+          </div>
+          <div className="mt-5 mb-5">
+            <Link
+              to="/"
+              href="/"
+            >
+              Return to home
+            </Link>
+          </div>
         </div>
-        <div className="mt-5 mb-5">
-          <Link
-            to="/"
-            href="/"
-          >
-            Return to home
-          </Link>
-        </div>
-      </div>
+      </Container>
     );
   }
 }

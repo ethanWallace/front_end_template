@@ -10,13 +10,19 @@ const ProductJumbo = (props) => {
     buttonAction,
     buttonText,
   } = props;
+  const style = {
+    padding: '12rem 2rem',
+    // eslint-disable-next-line max-len
+    backgroundImage: 'url(https://images.pexels.com/photos/1432942/pexels-photo-1432942.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)',
+    backgroundSize: 'cover',
+  };
   return (
-    <Jumbotron fluid>
+    <Jumbotron fluid style={style}>
       <Container>
-        <div>
+        <div className="text-light">
           <h1>{appName}</h1>
         </div>
-        <p className="lead">
+        <p className="lead text-light">
           {appDescription}
         </p>
         <div>
