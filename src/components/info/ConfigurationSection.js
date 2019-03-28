@@ -6,7 +6,7 @@ import LocalizedComponent
 
 import config from '../../assets/imgs/config.png';
 
-function ConfigSection() {
+export function ConfigSection() {
   return (
     <Row className="flex mt-5">
       <Col md="7" className="align-self-center">
