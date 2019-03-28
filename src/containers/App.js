@@ -32,16 +32,38 @@ import frFip from '../assets/imgs/sig-fr-w.png';
 export class App extends Component {
   static toggleLanguage(e) {
     if (e) e.preventDefault();
+<<<<<<< HEAD
     localizer.setLanguage(((localizer.lang === 'en_CA') ? 'fr_CA' : 'en_CA'));
     document.documentElement.lang = localizer.lang;
+=======
+    const lang = (localizer.lang === 'en_CA') ? 'fr_CA' : 'en_CA';
+    localizer.setLanguage(lang);
+    document.cookie = `lang=${lang};path=/`;
+>>>>>>> master
   }
   constructor(props) {
     super(props);
     this.state = { name: false };
   }
+<<<<<<< HEAD
   componentDidMount() {
     document.documentElement.lang = localizer.lang;
   }
+=======
+
+  componentWillMount() {
+    const cookies = decodeURIComponent(document.cookie).split(';');
+    cookies
+      .filter(c => c.trim().indexOf('lang=') === 0)
+      .forEach((c) => {
+        const lang = c.split('=', 2)[1];
+        if (localizer.hasLanguage(lang)) {
+          localizer.setLanguage(lang);
+        }
+      });
+  }
+
+>>>>>>> master
   render() {
     const {
       onLogin,
@@ -58,10 +80,15 @@ export class App extends Component {
       onLogout();
     };
 
+<<<<<<< HEAD
     const fip = ((localizer.lang === 'en_CA') ? enFip : frFip);
 
+=======
+>>>>>>> master
     return (
-      <BrowserRouter>
+      <BrowserRouter
+        basename={process.env.PUBLIC_URL}
+      >
         <div>
           <Navbar color="white" className="shadow-sm">
             <div className="h-100 directory-fip">

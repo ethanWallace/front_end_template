@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 // components
-import ConfigSection from '../components/info/ConfigurationSection';
+import LocalizedConfigSection from '../components/info/ConfigurationSection';
 import StructSection from '../components/info/StructureSection';
 import TogetherSection from '../components/info/TogetherSection';
 
@@ -15,10 +15,9 @@ class Info extends Component {
       <div className="mt-5">
         <h1>Using the Front-end Template</h1>
 
-        <ConfigSection />
+        <LocalizedConfigSection />
         <StructSection />
         <TogetherSection />
-
         <div>
           <p className="text-center h2 mt-4">Happy Coding</p>
         </div>
