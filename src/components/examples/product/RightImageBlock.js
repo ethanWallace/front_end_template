@@ -3,18 +3,10 @@ import PropTypes from 'prop-types';
 
 import { Row, Col, Button } from 'reactstrap';
 
-const MissionStatement = (props) => {
+const RightImageBlock = (props) => {
   const { heading, body } = props;
   return (
     <Row className="flex mt-4">
-      <Col className="align-self-center">
-        <img
-        // eslint-disable-next-line max-len
-          src="https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-          alt="trendy office desk"
-          className="img-fluid"
-        />
-      </Col>
       <Col className="align-self-center">
         <div>
           <div>
@@ -30,19 +22,27 @@ const MissionStatement = (props) => {
           </div>
         </div>
       </Col>
+      <Col className="align-self-center">
+        <img
+        // eslint-disable-next-line max-len
+          src="https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          alt="trendy office desk"
+          className="img-fluid"
+        />
+      </Col>
     </Row>
   );
 };
 
-MissionStatement.defaultProps = {
+RightImageBlock.defaultProps = {
   heading: 'Our Mission',
   // eslint-disable-next-line max-len
   body: 'Cheesecake dragée tart croissant sweet candy canes tootsie roll jelly. Jelly beans candy candy canes gummies dragée cake gingerbread caramels jelly-o. Sesame snaps croissant candy sweet. Jelly beans halvah cotton candy cheesecake apple pie brownie oat cake. Chupa chups danish toffee bear claw donut candy.',
 };
 
-MissionStatement.propTypes = {
+RightImageBlock.propTypes = {
   heading: PropTypes.string,
   body: PropTypes.string,
 };
 
-export default MissionStatement;
+export default RightImageBlock;

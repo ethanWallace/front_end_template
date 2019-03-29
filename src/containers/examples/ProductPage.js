@@ -4,12 +4,16 @@ import { Container, Row } from 'reactstrap';
 
 import ProductJumbo from '../../components/examples/product/ProductJumbo';
 import InfoText from '../../components/examples/product/InfoText';
-import MissionStatement from
-  '../../components/examples/product/MissionStatement';
+import LeftImageBlock from
+  '../../components/examples/product/LeftImageBlock';
+import RightImageBlock from
+  '../../components/examples/product/RightImageBlock';
 import ProductFeatures from
   '../../components/examples/product/ProductFeatures';
 import BlockCta from '../../components/examples/product/BlockCta';
 import FinalCta from '../../components/examples/product/FinalCta';
+import ProductStatistics from
+  '../../components/examples/product/ProductStatistics';
 
 const ProductPage = () => (
   <div>
@@ -18,7 +22,8 @@ const ProductPage = () => (
       <Row>
         <InfoText />
       </Row>
-      <MissionStatement />
+      <LeftImageBlock />
+      <RightImageBlock />
       <Row>
         <InfoText
           heading="The Future of OADW"
@@ -30,6 +35,7 @@ const ProductPage = () => (
         heading="Students"
       />
       <ProductFeatures />
+      <ProductStatistics />
     </Container>
     <BlockCta />
     <Container>

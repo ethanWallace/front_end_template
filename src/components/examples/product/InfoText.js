@@ -8,8 +8,8 @@ const InfoText = (props) => {
       <div className="text-center m-5">
         <h2>{heading}</h2>
       </div>
-      <div>
-        <p>{body}</p>
+      <div className="d-flex justify-content-center">
+        <p className="w-75">{body}</p>
       </div>
     </div>
   );
