@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container } from 'reactstrap';
 
 // components
-import ConfigSection from '../components/info/ConfigurationSection';
+import LocalizedConfigSection from '../components/info/ConfigurationSection';
 import StructSection from '../components/info/StructureSection';
 import TogetherSection from '../components/info/TogetherSection';
 
@@ -18,7 +18,7 @@ class Info extends Component {
         <div className="mt-5">
           <h1>Using the Front-end Template</h1>
 
-          <ConfigSection />
+          <LocalizedConfigSection />
           <StructSection />
           <TogetherSection />
 
