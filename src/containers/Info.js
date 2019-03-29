@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 // components
+// If components are exported as LocalizedComponent(Name)
+// make sure to import them as LocalizedName
 import LocalizedConfigSection from '../components/info/ConfigurationSection';
 import StructSection from '../components/info/StructureSection';
 import TogetherSection from '../components/info/TogetherSection';
@@ -18,6 +20,7 @@ class Info extends Component {
         <LocalizedConfigSection />
         <StructSection />
         <TogetherSection />
+
         <div>
           <p className="text-center h2 mt-4">Happy Coding</p>
         </div>

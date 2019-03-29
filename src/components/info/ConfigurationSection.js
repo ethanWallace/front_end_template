@@ -6,14 +6,10 @@ import LocalizedComponent
 
 import config from '../../assets/imgs/config.png';
 
-<<<<<<< HEAD
 import FileCode from './ConfigFileCode';
 import BackendCode from './BackendCodeExample';
 
-function ConfigSection() {
-=======
 export function ConfigSection() {
->>>>>>> master
   return (
     <Row className="flex mt-5">
       <Col md="7" className="align-self-center">

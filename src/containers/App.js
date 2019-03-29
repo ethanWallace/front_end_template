@@ -12,6 +12,9 @@ import {
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { connect } from 'react-redux';
+
+// For more information on gctools-componets visit
+// https://github.com/gctools-outilsgc/gctools-components
 import Login from '@gctools-components/gc-login';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
@@ -32,25 +35,15 @@ import frFip from '../assets/imgs/sig-fr-w.png';
 export class App extends Component {
   static toggleLanguage(e) {
     if (e) e.preventDefault();
-<<<<<<< HEAD
-    localizer.setLanguage(((localizer.lang === 'en_CA') ? 'fr_CA' : 'en_CA'));
-    document.documentElement.lang = localizer.lang;
-=======
     const lang = (localizer.lang === 'en_CA') ? 'fr_CA' : 'en_CA';
     localizer.setLanguage(lang);
+    document.documentElement.lang = lang;
     document.cookie = `lang=${lang};path=/`;
->>>>>>> master
   }
   constructor(props) {
     super(props);
     this.state = { name: false };
   }
-<<<<<<< HEAD
-  componentDidMount() {
-    document.documentElement.lang = localizer.lang;
-  }
-=======
-
   componentWillMount() {
     const cookies = decodeURIComponent(document.cookie).split(';');
     cookies
@@ -62,8 +55,9 @@ export class App extends Component {
         }
       });
   }
-
->>>>>>> master
+  componentDidMount() {
+    document.documentElement.lang = localizer.lang;
+  }
   render() {
     const {
       onLogin,
@@ -80,17 +74,14 @@ export class App extends Component {
       onLogout();
     };
 
-<<<<<<< HEAD
     const fip = ((localizer.lang === 'en_CA') ? enFip : frFip);
 
-=======
->>>>>>> master
     return (
       <BrowserRouter
         basename={process.env.PUBLIC_URL}
       >
         <div>
-          <Navbar color="white" className="shadow-sm">
+          <Navbar color="white" className="shadow-sm nav-bg">
             <div className="h-100 directory-fip">
               <img src={fip} alt={__('Government of Canada')} />
             </div>
@@ -110,6 +101,7 @@ export class App extends Component {
                 >
                   {({ onClick }) => (
                     <Button
+                      color="light"
                       onClick={(e) => {
                         e.stopPropagation();
                         onClick(e);
@@ -121,7 +113,7 @@ export class App extends Component {
                 </Login>
               </NavItem>
               <NavItem>
-                <Button onClick={App.toggleLanguage}>
+                <Button color="light" onClick={App.toggleLanguage}>
                   {__('Language')}
                 </Button>
               </NavItem>
@@ -130,7 +122,11 @@ export class App extends Component {
           <main>
             <Container className="mt-3">
 
-              {/* Routing in react */}
+              {/*
+                Route to other container components using React router
+                For more information visit:
+                https://reacttraining.com/react-router/
+              */}
               <Switch>
                 <Fragment>
                   <Route
