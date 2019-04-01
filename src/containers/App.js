@@ -24,6 +24,7 @@ import oidcConfig from '../oidcConfig.dev';
 import Home from './Home';
 import Info from './Info';
 import ProductPage from './examples/ProductPage';
+import Blog from './examples/Blog';
 
 // Assets
 import enFip from '../assets/imgs/sig-en-w.png';
@@ -121,6 +122,7 @@ export class App extends Component {
                 />
                 <Route path="/info" component={Info} />
                 <Route path="/product" component={ProductPage} />
+                <Route path="/blog" component={Blog} />
               </Fragment>
             </Switch>
           </main>
