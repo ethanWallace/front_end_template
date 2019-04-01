@@ -82,7 +82,7 @@ export class App extends Component {
         basename={process.env.PUBLIC_URL}
       >
         <div>
-          <Navbar color="white" className="shadow-sm nav-bg">
+          <Navbar className="shadow-sm nav-bg">
             <div className="h-100 directory-fip">
               <img src={fip} alt={__('Government of Canada')} />
             </div>
