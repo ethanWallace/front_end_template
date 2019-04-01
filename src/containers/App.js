@@ -11,6 +11,9 @@ import {
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { connect } from 'react-redux';
+
+// For more information on gctools-componets visit
+// https://github.com/gctools-outilsgc/gctools-components
 import Login from '@gctools-components/gc-login';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
@@ -28,19 +31,20 @@ import Blog from './examples/Blog';
 
 // Assets
 import enFip from '../assets/imgs/sig-en-w.png';
+import frFip from '../assets/imgs/sig-fr-w.png';
 
 export class App extends Component {
   static toggleLanguage(e) {
     if (e) e.preventDefault();
     const lang = (localizer.lang === 'en_CA') ? 'fr_CA' : 'en_CA';
     localizer.setLanguage(lang);
+    document.documentElement.lang = lang;
     document.cookie = `lang=${lang};path=/`;
   }
   constructor(props) {
     super(props);
     this.state = { name: false };
   }
-
   componentWillMount() {
     const cookies = decodeURIComponent(document.cookie).split(';');
     cookies
@@ -52,7 +56,9 @@ export class App extends Component {
         }
       });
   }
-
+  componentDidMount() {
+    document.documentElement.lang = localizer.lang;
+  }
   render() {
     const {
       onLogin,
@@ -69,14 +75,16 @@ export class App extends Component {
       onLogout();
     };
 
+    const fip = ((localizer.lang === 'en_CA') ? enFip : frFip);
+
     return (
       <BrowserRouter
         basename={process.env.PUBLIC_URL}
       >
         <div>
-          <Navbar color="white" className="shadow-sm">
+          <Navbar color="white" className="shadow-sm nav-bg">
             <div className="h-100 directory-fip">
-              <img src={enFip} alt="Government of Canada" />
+              <img src={fip} alt={__('Government of Canada')} />
             </div>
             <NavbarBrand href="/" className="directory-brand">
               <span>App Title</span>
@@ -94,25 +102,30 @@ export class App extends Component {
                 >
                   {({ onClick }) => (
                     <Button
+                      color="light"
                       onClick={(e) => {
                         e.stopPropagation();
                         onClick(e);
                       }}
                     >
-                      {this.state.name || 'Login'}
+                      {this.state.name || __('Login')}
                     </Button>
                   )}
                 </Login>
               </NavItem>
               <NavItem>
-                <Button onClick={App.toggleLanguage}>
+                <Button color="light" onClick={App.toggleLanguage}>
                   {__('Language')}
                 </Button>
               </NavItem>
             </Nav>
           </Navbar>
           <main>
-            {/* Routing in react */}
+            {/*
+                Route to other container components using React router
+                For more information visit:
+                https://reacttraining.com/react-router/
+            */}
             <Switch>
               <Fragment>
                 <Route

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { Container } from 'reactstrap';
 
 // components
+// If components are exported as LocalizedComponent(Name)
+// make sure to import them as LocalizedName
 import LocalizedConfigSection from '../components/info/ConfigurationSection';
 import StructSection from '../components/info/StructureSection';
 import TogetherSection from '../components/info/TogetherSection';

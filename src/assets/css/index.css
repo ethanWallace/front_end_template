@@ -34,6 +34,21 @@ code {
   padding-left: 295px;
 }
 
+.nav-bg {
+  background: #0d727a; /* Old browsers */
+  background: -moz-linear-gradient(left, #0d727a 0%, #0d84b9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #0d727a 0%,#0d84b9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #0d727a 0%,#0d84b9 100%);
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar-brand span {
+  margin-right:5px;
+}
+
 /* Temp CSS for intro pages */
 /* delete after installing */
 
@@ -49,13 +64,21 @@ code {
   color: #c60f5e;
 }
 
+@media (max-width: 1235px) {
+  .sm-blob {
+    width:100%;
+  }
+  .sm-img-col {
+    height:500px;
+  }
+}
+
 @media (max-width: 576px) {
   .img-col {
     height:0;
   }
 
   .sm-blob {
-    width:100%;
     float:none;
     height:auto;
   }
