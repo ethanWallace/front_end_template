@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Container,
   Button,
   Navbar,
   NavbarBrand,
@@ -27,6 +26,7 @@ import oidcConfig from '../oidcConfig.dev';
 // Containers
 import Home from './Home';
 import Info from './Info';
+import ProductPage from './examples/ProductPage';
 
 // Assets
 import enFip from '../assets/imgs/sig-en-w.png';
@@ -120,24 +120,22 @@ export class App extends Component {
             </Nav>
           </Navbar>
           <main>
-            <Container className="mt-3">
-
-              {/*
+            {/*
                 Route to other container components using React router
                 For more information visit:
                 https://reacttraining.com/react-router/
-              */}
-              <Switch>
-                <Fragment>
-                  <Route
-                    exact
-                    path="/"
-                    component={Home}
-                  />
-                  <Route path="/info" component={Info} />
-                </Fragment>
-              </Switch>
-            </Container>
+            */}
+            <Switch>
+              <Fragment>
+                <Route
+                  exact
+                  path="/"
+                  component={Home}
+                />
+                <Route path="/info" component={Info} />
+                <Route path="/product" component={ProductPage} />
+              </Fragment>
+            </Switch>
           </main>
         </div>
       </BrowserRouter>

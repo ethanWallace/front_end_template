@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import { Container } from 'reactstrap';
+
 // components
 // If components are exported as LocalizedComponent(Name)
 // make sure to import them as LocalizedName
@@ -14,25 +16,27 @@ class Info extends Component {
   }
   render() {
     return (
-      <div className="mt-5">
-        <h1>Using the Front-end Template</h1>
+      <Container>
+        <div className="mt-5">
+          <h1>Using the Front-end Template</h1>
 
-        <LocalizedConfigSection />
-        <StructSection />
-        <TogetherSection />
+          <LocalizedConfigSection />
+          <StructSection />
+          <TogetherSection />
 
-        <div>
-          <p className="text-center h2 mt-4">Happy Coding</p>
+          <div>
+            <p className="text-center h2 mt-4">Happy Coding</p>
+          </div>
+          <div className="mt-5 mb-5">
+            <Link
+              to="/"
+              href="/"
+            >
+              Return to home
+            </Link>
+          </div>
         </div>
-        <div className="mt-5 mb-5">
-          <Link
-            to="/"
-            href="/"
-          >
-            Return to home
-          </Link>
-        </div>
-      </div>
+      </Container>
     );
   }
 }
