@@ -21,22 +21,7 @@ yarn start
 
 ### Step 2 - Config :wrench:
 
-You will need to create an `oidcConfig.dev.js` file in the `src` directory to allow your app to login to your OpenID authentication provider. The file should be formated a little something like so:
-
-```
-const url = window.location.origin;
-
-module.exports = {
-  authority: 'https://your.OpenID.provider/openid',
-  client_id: '123456',
-  client_secret:
-  'shhhhhhhh-its-a-secret-to-everyone-replace-me',
-  scope: 'openid YOUR_SCOPES_HERE,
-  post_logout_redirect_uri: `${url}/#!logout`,
-  redirect_uri: `${url}/#!callback`,
-  silent_redirect_uri: `${url}/#!silent`,
-};
-```
+If your app need to login to your OpenID authentication provider, make sure to update your `oidcConfig.dev.js` file in the `src` directory. Don't forget to add this file to your `.gitignore`.
 
 Next if you have a graphQL backend set up that you wish to point your front end app to, in `src/index.js` replace the Apollo Client uri with your endpoint:
 
