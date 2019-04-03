@@ -38,7 +38,8 @@ export class App extends Component {
     if (e) e.preventDefault();
     const lang = (localizer.lang === 'en_CA') ? 'fr_CA' : 'en_CA';
     localizer.setLanguage(lang);
-    document.documentElement.lang = lang;
+    // eslint-disable-next-line max-len
+    document.documentElement.lang = ((localizer.lang === 'en_CA') ? 'en' : 'fr');
     document.cookie = `lang=${lang};path=/`;
   }
   constructor(props) {
@@ -57,7 +58,8 @@ export class App extends Component {
       });
   }
   componentDidMount() {
-    document.documentElement.lang = localizer.lang;
+    // eslint-disable-next-line max-len
+    document.documentElement.lang = ((localizer.lang === 'en_CA') ? 'en' : 'fr');
   }
   render() {
     const {
