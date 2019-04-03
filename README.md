@@ -1,15 +1,15 @@
-# OADW ReactJs Front End Template :tada:
+# OADW React.js Front End Template :tada:
 
-This is an opinionated Reactjs boilerplate to help you get started making front end applications. The boilerplate takes care of your theme and component libraries, project structure, routing, I18N, OpenID login, testing libraries, redux store, and code linting. :fire:
+This is an opinionated React.js boilerplate to help you get started making front-end applications. The boilerplate takes care of your theme and component libraries, project structure, routing, internationalization (I18N), OpenID login, testing libraries, redux store, and code linting. :fire:
 
 You are always free to add and remove features or packages that you need!
 
-This project will not provide your app with a graphQL backend / data store, but not to worry, [we have a template for that too!](https://github.com/gctools-outilsgc/micro_service_template) :sunglasses:
+This project will not provide your app with a GraphQL backend / data store, but not to worry, [we have a template for that too!](https://github.com/gctools-outilsgc/micro_service_template) :sunglasses:
 
-## Getting Starting :raised_hands:
+## Getting Started :raised_hands:
 
 ### Step 0
-You will need to have [Nodejs](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/lang/en/) installed.
+You will need to have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/lang/en/) installed.
 
 ### Step 1 - Install
 ```
@@ -23,14 +23,14 @@ yarn start
 
 If your app need to login to your OpenID authentication provider, make sure to update your `oidcConfig.dev.js` file in the `src` directory. Don't forget to add this file to your `.gitignore`.
 
-Next if you have a graphQL backend set up that you wish to point your front end app to, in `src/index.js` replace the Apollo Client uri with your endpoint:
+Next, if you have a GraphQL backend set up that you wish to point your front end app to, in `src/index.js` replace the Apollo Client uri with your endpoint:
 
 ```
 const client = new ApolloClient({
   uri: 'https://link.to.your.backend/graphql',
 });
 ```
-Need a graphQL backend? [Here is handy template to help you build one!](https://github.com/gctools-outilsgc/micro_service_template)
+Need a GraphQL backend? [Here is handy template to help you build one!](https://github.com/gctools-outilsgc/micro_service_template)
 
 Now you're ready to go! :cake:
 
@@ -57,8 +57,8 @@ All the packages discussed are already included in the project.
 ```
 
 ### Component Library and Styling :art:
-We leverage the [Aurora Design](https://design.gccollab.ca/) system which is a theme based on [Bootstrap](https://getbootstrap.com/).
-The boilerplate comes already packaged with the [Aurora stylesheet](https://www.npmjs.com/package/@gctools-components/aurora-css) and [reactstrap](https://reactstrap.github.io/components/alerts/) to help you build components quickly.
+We leverage the [Aurora Design system](https://design.gccollab.ca/) which is a theme based on [Bootstrap](https://getbootstrap.com/).
+The boilerplate comes already packaged with the [Aurora stylesheet](https://www.npmjs.com/package/@gctools-components/aurora-css) and [Reactstrap](https://reactstrap.github.io/components/alerts/) to help you build components quickly.
 
 ### Apollo Client and GraphQL
 
@@ -91,31 +91,31 @@ This project leverages [Jest](https://jestjs.io/docs/en/tutorial-react.html) and
 
 ### Routing :blue_car:
 
-Routing in the application in handled by [React-Router-Dom](https://github.com/ReactTraining/react-router#readme).
+Routing in the application is handled by [React-Router-Dom](https://github.com/ReactTraining/react-router#readme).
 
 Routes are defined in `src/containers/App.js` and should ideally route to another container component.
 
 ### Linting :sparkles:
 
-Please keep your code pretty, or else the app will not compile. [ESLint](https://eslint.org/) is configured through [this config package](https://github.com/gctools-outilsgc/gctools-components/tree/master/packages/eslint-config). It is an extension of the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript) with some small changes.
+Please keep your code pretty, or else the app will not compile! [ESLint](https://eslint.org/) is configured through [this config package](https://github.com/gctools-outilsgc/gctools-components/tree/master/packages/eslint-config). It is an extension of the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript) with some small changes.
 
 ### Github Pages Deployment :octocat:
 
-The template already comes prepared to deploy your front-end to github pages. First change the `homepage` in the `package.json` to the repo you want.
+The template already comes prepared to deploy your front-end to Github Pages. First change the `homepage` in the `package.json` to the repository you want.
 
 ```
 "homepage": "http://username.github.io/repo",
 ```
 
-Then run `yarn deploy-gh-pages` (give it a moment to build it could take a while :wink:)
+Then run `yarn deploy-gh-pages` (give it a moment to build. It could take a while :wink:)
 
 :warning: Watch and make sure your `config` or `env` files do not get pushed with the build!
 
 ### Included Layouts :gift:
 
-Included in this project are two example layouts. One is for a product page (`/product`) and another for a blog page (`/blog`). Each feature reusable components that you are free to use in your own project. If you have no need for them make sure to delete them from your project.
+Included in this project are two example layouts. One is for a product page (`/product`) and another for a blog page (`/blog`). Each one features reusable components that you are free to use in your own project. If you have no need for them make sure to delete them from your project.
 
 ### Additional Links :wink:
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
