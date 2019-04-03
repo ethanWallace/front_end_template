@@ -118,4 +118,4 @@ Included in this project are two example layouts. One is for a product page (`/p
 ### Additional Links :wink:
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-This project was Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
