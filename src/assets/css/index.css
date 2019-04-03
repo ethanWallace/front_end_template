@@ -64,6 +64,14 @@ code {
   color: #c60f5e;
 }
 
+.text-muted {
+  color: #5e666c !important;
+}
+
+.figure-caption {
+  color: #5e666c;
+}
+
 @media (max-width: 1235px) {
   .sm-blob {
     width:100%;

@@ -1,6 +1,6 @@
 # OADW ReactJs Front End Template :tada:
 
-This is an opinionated Reactjs boilerplate to help you get started making front end applications. The boilerplate takes care of your theme and component libraries, project structure, routing, I18N, OpenID login, testing libraries, redux store, and code linting. :fire: 
+This is an opinionated Reactjs boilerplate to help you get started making front end applications. The boilerplate takes care of your theme and component libraries, project structure, routing, I18N, OpenID login, testing libraries, redux store, and code linting. :fire:
 
 You are always free to add and remove features or packages that you need!
 
@@ -111,9 +111,11 @@ Then run `yarn deploy-gh-pages` (give it a moment to build it could take a while
 
 :warning: Watch and make sure your `config` or `env` files do not get pushed with the build!
 
+### Included Layouts :gift:
+
+Included in this project are two example layouts. One is for a product page (`/product`) and another for a blog page (`/blog`). Each feature reusable components that you are free to use in your own project. If you have no need for them make sure to delete them from your project.
+
 ### Additional Links :wink:
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-Learn about [Storybook](https://storybook.js.org/) for building custom components in your project. Storybook is included in this template. Run `yarn run storybook`.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

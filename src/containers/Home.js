@@ -58,6 +58,26 @@ class Home extends Component {
                 </a>
               </li>
             </ul>
+
+            <h3 className="h4 mt-3">Example layouts</h3>
+            <ul>
+              <li>
+                <Link
+                  to="/product"
+                  href="/product"
+                >
+                  Product page
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blog"
+                  href="/blog"
+                >
+                  Blog page
+                </Link>
+              </li>
+            </ul>
           </Col>
           <Col className="img-col" xs="12" sm="5" md={{ size: 6, offset: 1 }}>
             <img src={blob} alt="" className="display-img" />
